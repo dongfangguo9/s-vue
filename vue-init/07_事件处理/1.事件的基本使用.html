@@ -21,6 +21,9 @@
 			<!-- <button v-on:click="showInfo">点我提示信息</button> -->
 			<button @click="showInfo1">点我提示信息1（不传参）</button>
 			<button @click="showInfo2($event,66)">点我提示信息2（传参）</button>
+			<!-- 在差值中调用方法续带上括号，代表调用的返回值 -->
+			<h1>{{showInfo1()}}</h1>
+			<h1>{{showInfo1}}</h1>
 		</div>
 	</body>
 
