@@ -7,7 +7,9 @@
 </template>
 
 <script>
+// 组件暴露的简写形式
 	 export default {
+		//  定义组件名
 		name:'School',
 		data(){
 			return {
