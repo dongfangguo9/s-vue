@@ -8,7 +8,7 @@
 	<body>
 		<!-- 
 			关于VueComponent：
-						1.school组件本质是一个名为VueComponent的构造函数，且不是程序员定义的，是Vue.extend生成的。
+						1.school组件本质是一个名为VueComponent的构造函数，且不是程序员定义的，是Vue.extend生成的。参数不同返回的vc是不同的构造函数
 
 						2.我们只需要写<school/>或<school></school>，Vue解析时会帮我们创建school组件的实例对象，
 							即Vue帮我们执行的：new VueComponent(options)。
@@ -33,7 +33,6 @@
 
 	<script type="text/javascript">
 		Vue.config.productionTip = false
-		
 		//定义school组件
 		const school = Vue.extend({
 			name:'school',
@@ -56,11 +55,12 @@
 				}
 			},
 		})
-
+		console.log(school);
 		const test = Vue.extend({
 			template:`<span>atguigu</span>`
 		})
-
+		console.log(test);
+		console.log(test===school);
 		//定义hello组件
 		const hello = Vue.extend({
 			template:`
